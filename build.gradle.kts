@@ -38,20 +38,36 @@ apply(plugin = "java")
 apply(plugin = "kotlin-kapt")
 
 dependencies {
+
+    // Spring Boot
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    // Lombok
+    annotationProcessor("org.projectlombok:lombok")
+    compileOnly("org.projectlombok:lombok")
+
+    // Kotlin
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    compileOnly("org.projectlombok:lombok")
+
+    // DBConnect
     runtimeOnly("com.h2database:h2")
-    annotationProcessor("org.projectlombok:lombok")
+
+    // test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-    //querydsl
-    implementation("com.querydsl:querydsl-jpa:$querydslVersion")
-    kapt("com.querydsl:querydsl-apt:$querydslVersion:jpa")
+    // QueryDsl
     kapt("org.springframework.boot:spring-boot-configuration-processor")
+    implementation("com.querydsl:querydsl-jpa")
+    kapt(group = "com.querydsl", name = "querydsl-apt", classifier = "jpa")
+
+    sourceSets.main {
+        withConvention(org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet::class) {
+            kotlin.srcDir("$buildDir/generated/source/kapt/main")
+        }
+    }
 }
 
 
