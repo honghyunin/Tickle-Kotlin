@@ -56,7 +56,10 @@ dependencies {
     runtimeOnly("com.h2database:h2")
 
     // test
+    testImplementation ("io.kotest:kotest-property")
+    testImplementation ("io.kotest:kotest-assertions-core")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation ("io.kotest:kotest-runner-junit5")
 
     // QueryDsl
     kapt("org.springframework.boot:spring-boot-configuration-processor")
@@ -80,6 +83,6 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-tasks.withType<Test> {
+tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }
