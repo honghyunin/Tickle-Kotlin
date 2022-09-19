@@ -1,4 +1,4 @@
-package spring.boot.relationship.syntax.`class`
+package spring.boot.tickle.syntax.`class`
 
 import org.junit.jupiter.api.Test
 

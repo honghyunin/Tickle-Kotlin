@@ -1,4 +1,4 @@
-package spring.boot.relationship.syntax.function
+package spring.boot.tickle.syntax.function
 
 import org.junit.jupiter.api.Test
 

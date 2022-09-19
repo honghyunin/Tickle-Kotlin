@@ -1,4 +1,4 @@
-package spring.boot.relationship.syntax.variables
+package spring.boot.tickle.syntax.variables
 
 class VariablesSyntax {
 

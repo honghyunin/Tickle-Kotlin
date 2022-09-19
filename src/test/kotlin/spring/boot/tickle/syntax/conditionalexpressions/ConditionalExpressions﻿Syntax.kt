@@ -1,4 +1,4 @@
-package spring.boot.relationship.syntax.conditionalexpressions
+package spring.boot.tickle.syntax.conditionalexpressions
 
 import org.junit.jupiter.api.Test
 
