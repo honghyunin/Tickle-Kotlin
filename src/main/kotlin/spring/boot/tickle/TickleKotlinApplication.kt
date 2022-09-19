@@ -1,11 +1,11 @@
-package spring.boot.relationship
+package spring.boot.tickle
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class RelationShipApplication
+class TickleKotlinApplication
 
 fun main(args: Array<String>) {
-	runApplication<RelationShipApplication>(*args)
+	runApplication<TickleKotlinApplication>(*args)
 }

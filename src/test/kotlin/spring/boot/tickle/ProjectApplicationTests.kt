@@ -1,10 +1,10 @@
-package spring.boot.relationship
+package spring.boot.tickle
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class ProjectApplicationTests {
+class TickleKotlinApplicationTest {
 
 	@Test
 	fun contextLoads() {
